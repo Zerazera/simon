@@ -1,0 +1,74 @@
+<html lang='en-US'>
+
+  <head>
+    <title>Simon</title>
+    <meta name='description' content='It&apos;s Simon! Simon is a Milton-Bradley game released in 1978. It was extremely popular in its time. Now you, too, can experience the fun of Simon. After 20 levels, you&apos;ll move on up to victory!' />
+    <meta charset='UTF-8'>
+    <meta name='author' content='Samuel Cupidon' />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href='https://fonts.googleapis.com/css?family=Orbitron:700' rel='stylesheet' type='text/css' />
+    <link rel='stylesheet' href='./css/main.css' />
+  </head>
+
+  <body>
+    <audio id='startGameSound' preload='auto'>
+      <source src='./sound/startGame.wav' type='audio/wav'>
+    </audio>
+
+    <audio id='greenButtonSound' preload='auto'>
+      <source src='./sound/simonSound1.mp3' type='audio/mpeg'>
+    </audio>
+
+    <audio id='redButtonSound' preload='auto'>
+      <source src='./sound/simonSound2.mp3' type='audio/mpeg'>
+    </audio>
+
+    <audio id='yellowButtonSound' preload='auto'>
+      <source src='./sound/simonSound3.mp3' type='audio/mpeg'>
+    </audio>
+
+    <audio id='blueButtonSound' preload='auto'>
+      <source src='./sound/simonSound4.mp3' type='audio/mpeg'>
+    </audio>
+
+    <audio id='wrongSound' preload='auto'>
+      <source src='./sound/wrongSound.mp3' type='audio/mpeg'>
+    </audio>
+
+    <audio id='victorySound' preload='auto'>
+      <source src='./sound/victorySong.mp3' type='audio/mpeg'>
+    </audio>
+
+    <div id='simonBoard'>
+      <button id='greenButton' class='greenButtonDeselected'></button>
+      <button id='redButton' class='redButtonDeselected'></button>
+      <button id='yellowButton' class='yellowButtonDeselected'></button>
+      <button id='blueButton' class='blueButtonDeselected'></button>
+
+      <div id='controlPanel'>
+
+        <div id='simonBrand'>
+          <img src='./images/milton_bradley_logo.png' alt='Milton Bradley Logo' id='logo'>
+          <div id='simonLabel'>
+            simon<span id='tm'>TM</span>
+          </div><!--#simonLabel-->
+        </div><!--#simonBrand-->
+
+        <span id='display'>
+          <span id='count' class='normalDisplay'>&mdash;&mdash;</span>
+        </span><!--#display-->
+
+        <span id='strictIndicator' class='strictOff'>S</span>
+        <button id='startButton' class='controlPanelButton'></button>
+        <span id='startButtonCaption' class='buttonCaption'>Start</span>
+        <button id='strictButton' class='controlPanelButton'></button>
+        <span id='strictButtonCaption' class='buttonCaption'>Strict Mode</span>
+        <button id='lastButton' class='controlPanelButton'></button>
+        <span id='lastButtonCaption' class='buttonCaption'>Last</span>
+        <button id='longestButton' class='controlPanelButton'></button>
+        <span id='longestButtonCaption' class='buttonCaption'>Longest</span>
+      </div><!--#controlPanel-->
+    </div><!--#simonBoard-->
+    <script src='./js/main.js'></script>
+  </body>
+</html>
